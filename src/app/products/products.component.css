@@ -1,0 +1,10 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.sort {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}

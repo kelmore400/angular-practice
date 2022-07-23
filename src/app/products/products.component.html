@@ -1,0 +1,28 @@
+<p>products works!</p>
+
+<div *ngFor="let category of categories">
+  <label [for]="category">{{category}}
+    <input type="radio" name="category" [id]="category" (click)="filter(category)" 
+    [checked]="category === currentCategory" [value]="category"/>
+  </label>
+</div>
+
+<div class="sort">
+  <label for="sort">Сортировать по цене</label>
+    <select name="sort" id="sort" (change)="sortByPrice($event)">
+      <option value="default" [selected]="sortBy === 'default'">По умолчанию</option>
+      <option value="asc" [selected]="sortBy === 'asc'">По возрастанию</option>
+      <option value="desc" [selected]="sortBy === 'desc'">По убыванию</option>
+    </select>
+</div>
+
+<div>
+  <a href="#" (click)="changePage($event, page)" *ngFor="let page of pages">{{page}}</a>
+</div>
+
+<div class="products">
+  <app-product *ngFor= "let product of products" [product]="product" ></app-product>
+</div>
+
+
+

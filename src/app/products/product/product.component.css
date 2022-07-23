@@ -1,0 +1,17 @@
+.product {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 0 10px;
+  height: calc(100% - 30px);
+}
+.thumbnail {
+  overflow: hidden;
+  max-height: 300px;
+}
+
+.thumbnail img {
+  margin: auto;
+  display: block;
+  width: 100%;
+}
